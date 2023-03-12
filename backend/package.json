@@ -1,0 +1,30 @@
+{
+  "name": "reside",
+  "version": "1.0.0",
+  "description": "This a simple application.",
+  "main": "index.js",
+  "scripts": {
+    "start:client": "npm run start --prefix client",
+    "start:server": "nodemon server.js",
+    "build": "set \"PUBLIC_URL=/client/\" && react-scripts build --template client/public/index.html",
+    "dev": "concurrently \"npm run start:client\" \"npm run start:server\""
+  },
+  "author": "Pratham Nikam",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase": "^9.17.2",
+    "firebase-admin": "^11.5.0",
+    "firebase-auth": "^0.1.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.2",
+    "react-scripts": "^5.0.1",
+    "socket.io": "^4.6.1",
+    "socket.io-client": "^4.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
